@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   <style>
+     body {
+           background-color: #096e48;
+        }
+
+        header {
+            background-color: #000000;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #section1 {
+            max-width: 450px;           
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #1ad16c;
+            color: #fff;
+            padding: 15px;
+            display: block;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 18px;
+           
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: green;
+            text-align: center;
+            
+        }
+        footer{
+            text-align: center;
+            color: #000000;
+            font-size: 16px;
+            color: white;
+            background-color: black;
+            height: 40px;
+            
+        }
+   </style>
+   
+
+    <header>
+        <h1>წნევის მონიტორინგი</h1>
+    </header>
+    
+
+   
+    <section id="section1">
+        <form id="personal">
+            <label class="info">პირადობა(11 ციფრი)</label>
+            <input type="number" class="input" id="id" maxlength="11" minlength="11"  >
+            
+            <label class="info">სახელი:</label>
+            <input type="text" class="input" id="name" >
+            
+            <label class="info">გვარი:</label>
+            <input type="text" class="input" id="lastname" >
+            
+            <label class="info">თარიღი:</label>
+            <input type="date" class="input" id="date" >
+       
+            <br>
+            
+            
+       
+            <label id="">წნევა 9:00 </label>
+            max<input type="number" min="1" max="700" id="first"  name="wneva" class="input2" required>
+            <input type="number" min="1" max="700" id="first2" name="wneva"class="input2"required>min
+            <br>
+            <label>წნევა 10:00 </label>
+            max<input type="number" min="1" max="700" id="sec"  name="wneva"class="input2"required>
+            <input type="number" min="1" max="700" id="sec2"  name="wneva" class="input2" required>min
+            <br>
+            <label>წნევა 11:00 </label>
+            max<input type="number" min="1" max="700" id="third"  name="wneva" class="input2"required>
+            <input type="number" min="1" max="700" id="third2"  name="wneva" class="input2"required>min
+            <br>
+            <label>წნევა 12:00 </label>
+            max<input type="number" min="1" max="700" id="four"  name="wneva" class="input2"required>
+            <input type="number" min="1" max="700" id="four2"  name="wneva" class="input2"required>min
+
+            <br>
+            <br>
+           
+        </form>
+            
+            
+            <label id="result"></label>
+            <br>
+    
+            <button id="button">click</button>
+      </section>
+            
+  
+    <script>
+        document.getElementById("button").onclick = function(){
+    
+
+    var first = document.getElementById("first");
+    var sec = document.getElementById("sec");
+    var third = document.getElementById("third");
+    var four = document.getElementById("four");
+    
+    var inputValue1 = Number(first.value);
+    var inputValue2 = Number(sec.value);
+    var inputValue3 = Number(third.value);
+    var inputValue4 = Number(four.value);
+    
+    var first2 = document.getElementById("first2");
+    var sec2 = document.getElementById("sec2");
+    var third2 = document.getElementById("third2");
+    var four2 = document.getElementById("four2");
+    
+    var inputValue12 = Number(first2.value);
+    var inputValue22 = Number(sec2.value);
+    var inputValue32 = Number(third2.value);
+    var inputValue42 = Number(four2.value);
+    
+    var res1 = (inputValue1+inputValue2+inputValue3+inputValue4)/4;
+    var res2 =(inputValue12+inputValue22+inputValue32+inputValue42)/4;
+    
+    document.getElementById("result").innerHTML ="საშუალო = " + res1 + " : " + res2;
+    
+    }
+    </script>
+    <footer> 
+        <h3> ყველა უფლება დაცულია &copy;</h3>
+    </footer>
+</body>
+</html>
